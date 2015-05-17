@@ -29,25 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.btnOri = new System.Windows.Forms.Button();
             this.camImg = new System.Windows.Forms.TextBox();
             this.camCurso = new System.Windows.Forms.TextBox();
             this.btnDest = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
-            this.camImg2 = new System.Windows.Forms.OpenFileDialog();
             this.camCurso2 = new System.Windows.Forms.FolderBrowserDialog();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnOri
-            // 
-            this.btnOri.Location = new System.Drawing.Point(208, 12);
-            this.btnOri.Name = "btnOri";
-            this.btnOri.Size = new System.Drawing.Size(75, 23);
-            this.btnOri.TabIndex = 0;
-            this.btnOri.Text = "Origem";
-            this.btnOri.UseVisualStyleBackColor = true;
-            this.btnOri.Click += new System.EventHandler(this.btnOri_Click);
             // 
             // camImg
             // 
@@ -57,8 +45,7 @@
             this.camImg.Size = new System.Drawing.Size(164, 20);
             this.camImg.TabIndex = 1;
             this.camImg.TextChanged += new System.EventHandler(this.camImg_TextChanged);
-            this.camImg.DragEnter += new System.Windows.Forms.DragEventHandler(this.camImg_DragDrop);
-            this.camImg.MouseDown += new System.Windows.Forms.MouseEventHandler(this.camImg_MouseDown);
+            this.camImg.MouseDown += new System.Windows.Forms.MouseEventHandler(this.camCurso_MouseDoubleClick);
             // 
             // camCurso
             // 
@@ -91,33 +78,26 @@
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // camImg2
+            // label1
             // 
-            this.camImg2.FileName = "Abrir arquivo";
-            this.camImg2.Multiselect = true;
-            this.camImg2.FileOk += new System.ComponentModel.CancelEventHandler(this.camImg2_FileOk);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(313, 74);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(179, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Desejo jogar em todos os álbuns";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(221, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Origem";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 121);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnDest);
             this.Controls.Add(this.camCurso);
             this.Controls.Add(this.camImg);
-            this.Controls.Add(this.btnOri);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Substituição!";
@@ -131,14 +111,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnOri;
         private System.Windows.Forms.TextBox camImg;
         private System.Windows.Forms.TextBox camCurso;
         private System.Windows.Forms.Button btnDest;
         private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.OpenFileDialog camImg2;
         private System.Windows.Forms.FolderBrowserDialog camCurso2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
