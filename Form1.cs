@@ -62,7 +62,7 @@ namespace SubstituirFotos2
 
                 albumFormandos = (Directory.GetDirectories(caminhoCurso.Text, "*"));  // Listando todos os álbuns que começam com "20" e agrupando numa variável
                 pastaSubs = (Directory.GetDirectories(caminhoCurso.Text, "*ubsti*").First());
-                arquivosPastaSubs.AddRange(Directory.GetFileSystemEntries(pastaSubs, "*", SearchOption.AllDirectories)); // Listando todas as fotos da pasta substituir
+                arquivosPastaSubs.AddRange(Directory.GetFileSystemEntries(pastaSubs, "*.jp*", SearchOption.AllDirectories)); // Listando todas as fotos da pasta substituir
                 qtdFoto = 0;
                 progressBar1.Maximum = arquivosPastaSubs.Count();
                 foreach (String s in arquivosPastaSubs) // Percorrendo o laço dos arquivos à serem substituidos
