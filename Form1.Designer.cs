@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // caminhoCurso
@@ -57,7 +58,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(95, 50);
+            this.btnOK.Location = new System.Drawing.Point(12, 60);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 2;
@@ -79,16 +80,28 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(190, 55);
+            this.progressBar1.Location = new System.Drawing.Point(93, 60);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(82, 18);
+            this.progressBar1.Size = new System.Drawing.Size(179, 18);
             this.progressBar1.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.Location = new System.Drawing.Point(9, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "lemmarcelo@gmail.com";
             // 
             // Sub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 86);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(284, 102);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOK);
@@ -97,8 +110,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(1000, 500);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(300, 300);
-            this.MinimumSize = new System.Drawing.Size(300, 115);
+            this.MaximumSize = new System.Drawing.Size(300, 140);
+            this.MinimumSize = new System.Drawing.Size(300, 140);
             this.Name = "Sub";
             this.Text = "Substituir";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -115,6 +128,7 @@
         private System.Windows.Forms.Label label2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

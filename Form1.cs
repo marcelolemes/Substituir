@@ -63,25 +63,23 @@ namespace SubstituirFotos2
                 albumFormandos = (Directory.GetDirectories(caminhoCurso.Text, "20*"));  // Listando todos os álbuns que começam com "20" e agrupando numa variável
                 pastaSubs = (Directory.GetDirectories(caminhoCurso.Text, "*Subs*").First());
                 arquivosPastaSubs.AddRange(Directory.GetFileSystemEntries(pastaSubs, "*", SearchOption.AllDirectories)); // Listando todas as fotos da pasta substituir
-                qtdFoto = arquivosPastaSubs.Count();
+                qtdFoto = 0;
+                progressBar1.Maximum = arquivosPastaSubs.Count();
                 foreach (String s in arquivosPastaSubs) // Percorrendo o laço dos arquivos à serem substituidos
                 {
 
 
                     String[] parcial = s.Split('\\'); // Obtendo o nome da foto, extraindo com caminho geral do arquivo
                     nomeFoto = parcial[parcial.Length - 1];
-                    if (qtdFoto > 1)
-                    {
-                        progressBar1.Value = (arquivosPastaSubs.Count() - qtdFoto) * (100/arquivosPastaSubs.Count());
-                        
+                    
+                    
+                        qtdFoto++;
+
+                        progressBar1.Value = qtdFoto;
+                       // MessageBox.Show(progressBar1.Value.ToString());
                         // label2.Text = "Por favor aguarde!"; // Marcando na que o processo ainda está ocorrendo
-                        qtdFoto--;
-                    }
-                    else
-                    {
-                        progressBar1.Value = 100;
-                        
-                    }
+                     
+                    
                     foreach (String a in albumFormandos) // Laço perconrrendo a pasta dos formandos apenas
                     {
                         arquivosEncontrados.Clear(); // Limpando a lista de arquivos encontrados pela pesquisa
