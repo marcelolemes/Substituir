@@ -60,7 +60,7 @@ namespace SubstituirFotos2
             if (Directory.Exists(caminhoCurso.Text)) // Verifcando se o caminho inserido é válido
             {
 
-                albumFormandos = (Directory.GetDirectories(caminhoCurso.Text, "20*"));  // Listando todos os álbuns que começam com "20" e agrupando numa variável
+                albumFormandos = (Directory.GetDirectories(caminhoCurso.Text, "*"));  // Listando todos os álbuns que começam com "20" e agrupando numa variável
                 pastaSubs = (Directory.GetDirectories(caminhoCurso.Text, "*ubsti*").First());
                 arquivosPastaSubs.AddRange(Directory.GetFileSystemEntries(pastaSubs, "*", SearchOption.AllDirectories)); // Listando todas as fotos da pasta substituir
                 qtdFoto = 0;
