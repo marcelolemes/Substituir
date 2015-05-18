@@ -61,7 +61,7 @@ namespace SubstituirFotos2
             {
 
                 albumFormandos = (Directory.GetDirectories(caminhoCurso.Text, "20*"));  // Listando todos os álbuns que começam com "20" e agrupando numa variável
-                pastaSubs = (Directory.GetDirectories(caminhoCurso.Text, "*Subs*").First());
+                pastaSubs = (Directory.GetDirectories(caminhoCurso.Text, "*ubsti*").First());
                 arquivosPastaSubs.AddRange(Directory.GetFileSystemEntries(pastaSubs, "*", SearchOption.AllDirectories)); // Listando todas as fotos da pasta substituir
                 qtdFoto = 0;
                 progressBar1.Maximum = arquivosPastaSubs.Count();
@@ -111,7 +111,7 @@ namespace SubstituirFotos2
 
             else
             {
-
+                MessageBox.Show("Por favor, insira um caminho válido");
             }
         }
     }
